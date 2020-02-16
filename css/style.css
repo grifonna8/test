@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'ProximaNova-Light';
   src: url("../fonts/ProximaNova/ProximaNova-Light.woff") format("woff");
@@ -8,13 +9,6 @@
 @font-face {
   font-family: 'ProximaNova-Regular';
   src: url("../fonts/ProximaNova/ProximaNova-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: 'ProximaNova-Semibold';
-  src: url("../fonts/ProximaNova/ProximaNova-Semibold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
@@ -324,3 +318,217 @@ template {
  */
 [hidden] {
   display: none; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html {
+  font-size: 14px; }
+
+body {
+  background-color: #f7f7f7;
+  font-family: 'ProximaNova-Regular', sans-serif;
+  font-size: 1rem; }
+
+img {
+  max-width: 100%; }
+
+.container {
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-around; }
+
+.col-50 {
+  width: 50%; }
+
+.button--primary {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: #0284c6;
+  color: #ffffff;
+  font-size: 0.928rem;
+  padding: 0.714rem 0;
+  margin-bottom: 0.714rem; }
+
+.button--outline {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: GrayLighter;
+  color: #333333;
+  font-size: 0.928rem;
+  padding: 0.714rem 0; }
+
+.checkbox {
+  color: #4a4a4a;
+  margin-bottom: 0.714rem;
+  font-family: 'ProximaNova-Light', sans-serif; }
+  .checkbox-wrapper {
+    display: -webkit-box;
+    display: flex; }
+
+.shift {
+  max-width: 1rem;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  padding-left: 5px; }
+
+.empty-line {
+  margin-bottom: 1.785rem; }
+
+input:checked + label {
+  color: #3e8bdc; }
+
+input:hover + label {
+  cursor: pointer;
+  color: #3e8bdc; }
+
+.checkbox input[type="checkbox"] {
+  opacity: 0; }
+
+.checkbox label {
+  position: relative; }
+  .checkbox label::before {
+    content: '';
+    position: absolute;
+    left: -1.2rem;
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    border: 1px solid #d7d7d7; }
+  .checkbox label::after {
+    content: '';
+    background: #3e8bdc url("../img/check-white.svg") center no-repeat;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    left: -1.2rem; }
+
+/*Прячем галку по умолчанию*/
+.checkbox input[type="checkbox"] + label::after {
+  content: none; }
+
+/*Показываем галку по состоянию checked*/
+.checkbox input[type="checkbox"]:checked + label::after {
+  content: ''; }
+
+.star {
+  background: url("../img/star.svg") center no-repeat;
+  display: inline-block;
+  width: 10px;
+  height: 10px; }
+
+.star-0 {
+  background: url("../img/star-0.svg") center no-repeat;
+  display: inline-block;
+  width: 10px;
+  height: 10px; }
+
+.card {
+  margin-top: 0.714rem;
+  width: 21.928rem;
+  height: 42.142rem;
+  border-radius: 2px;
+  background-color: #ffffff; }
+  .card--half {
+    height: 23.428rem; }
+  .card__wrapper {
+    width: 85%;
+    margin: auto;
+    padding-top: 1.142rem; }
+    .card__wrapper--half {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column; }
+    .card__wrapper--top {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: justify;
+      justify-content: space-between; }
+    .card__wrapper--bottom {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      align-items: center; }
+  .card__article-number {
+    color: #7e7e7e;
+    font-size: 0.857rem;
+    font-family: 'ProximaNova-Light', sans-serif; }
+  .card__image {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-top: 1.357rem;
+    margin-bottom: 1.428rem; }
+  .card__stock {
+    color: #32ca00;
+    font-family: 'ProximaNova-Light', sans-serif; }
+  .card__title {
+    color: #333333;
+    font-size: 1.285rem;
+    margin-top: 0.714rem;
+    margin-bottom: 1.07rem; }
+  .card__subtitle {
+    margin-bottom: 6px; }
+  .card__price {
+    margin-top: 1rem;
+    color: #333333;
+    font-size: 1.785rem;
+    margin-bottom: 5px; }
+  .card__bonus {
+    margin-bottom: 1.071rem;
+    font-family: 'ProximaNova-Light', sans-serif;
+    color: #3e8bdc;
+    font-size: 0.857rem;
+    font-weight: 300; }
+  .card__button {
+    color: #ffffff;
+    background-color: #0284c6;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 8px 15px; }
+    .card__button:hover {
+      background-color: #0a608b; }
+
+.info--first, .info--third, .info--fifth, .info--seventh {
+  color: #7e7e7e;
+  margin-right: 0.714rem;
+  font-family: 'ProximaNova-Light', sans-serif;
+  font-size: 0.857rem;
+  font-weight: 300; }
+
+.info--second, .info--fourth, .info--sixth, .info--eighth {
+  color: #333333;
+  font-family: 'ProximaNova-Light', sans-serif;
+  font-size: 0.857rem;
+  font-weight: 300; }
+
+.check {
+  margin-right: 5px; }
+
+.cart {
+  margin-bottom: -2px;
+  padding-right: 0.714rem; }
+
+.comparison {
+  margin-left: 1.428rem; }
+
+.fav {
+  display: inline-block;
+  width: 1.428rem;
+  height: 1.428rem;
+  cursor: pointer;
+  background: url("../img/favourite-disabled.svg") center no-repeat; }
+
+.maker {
+  margin-top: 2.142rem;
+  margin-bottom: 0.928rem;
+  color: #333333;
+  font-size: 1.214rem; }

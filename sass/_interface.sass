@@ -1,0 +1,65 @@
+.button
+  &--primary
+    cursor: pointer
+    outline: none
+    border: none
+    background: $Blue
+    color: $White
+    font-size: 0.928rem
+    padding: 0.714rem 0
+    margin-bottom: 0.714rem
+  &--outline
+    cursor: pointer
+    outline: none
+    border: none
+    background: GrayLighter
+    color: $GrayDarkest
+    font-size: 0.928rem
+    padding: 0.714rem 0
+.checkbox
+  color: $GrayDarker
+  margin-bottom: 0.714rem
+  font-family: 'ProximaNova-Light', sans-serif
+  &-wrapper
+    display: flex
+.shift
+  max-width: 1rem
+  display: inline-flex
+  padding-left: 5px 
+.empty-line
+  margin-bottom: 1.785rem
+input
+  &:checked + 
+    label
+      color: $BlueLight
+  &:hover + 
+    label
+      cursor: pointer
+      color: $BlueLight
+.checkbox input[type="checkbox"]
+  opacity: 0
+.checkbox 
+  label
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      left: -1.2rem
+      display: inline-block
+      height: 1rem
+      width: 1rem
+      border: 1px solid $Border
+    &::after
+      content: ''
+      background: $BlueLight url('../img/check-white.svg') center no-repeat
+      position: absolute
+      width: 1rem
+      height: 1rem
+      left: -1.2rem
+/*Прячем галку по умолчанию*/
+.checkbox input[type="checkbox"] + label::after
+  content: none
+/*Показываем галку по состоянию checked*/
+.checkbox input[type="checkbox"]:checked + label::after
+  content: ''
+
