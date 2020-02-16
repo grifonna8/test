@@ -464,8 +464,8 @@ input:hover + label {
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
-    margin-top: 1.357rem;
-    margin-bottom: 1.428rem; }
+    margin-top: 2.6rem;
+    margin-bottom: 2.6rem; }
   .card__stock {
     color: #32ca00;
     font-family: 'ProximaNova-Light', sans-serif; }
